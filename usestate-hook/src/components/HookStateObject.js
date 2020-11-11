@@ -14,9 +14,12 @@ function HookStateObject() {
         value={about.bio}
         onChange={(e) => setAbout({ ...about, bio: e.target.value })}
       />
-      <h3>Your name is - {about.name}</h3>
-      <h3>Your are working as - {about.bio}</h3>
-      <h3>{JSON.stringify(about)}</h3>
+      <h2>Your name is - {about.name}</h2>
+      <h2>Your are working as - {about.bio}</h2>
+      <text>Current state of object is</text>
+      <br />
+      <br />
+      <text>{JSON.stringify(about)}</text>
     </form>
   );
 }
