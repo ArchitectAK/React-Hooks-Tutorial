@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 
 function HookStateObject() {
-  const [about, setAbout] = useState({ name: "", bio: "" });
+  const [about, setAbout] = useState({ name: "Ankit", bio: "Developer" });
   return (
     <form>
       <input
         type="text"
         value={about.name}
-        onChange={(e) => about({ ...about, name: e.target.value })}
+        onChange={(e) => setAbout({ ...about, name: e.target.value })}
       />
       <input
         type="text"
         value={about.bio}
         onChange={(e) => setAbout({ ...about, bio: e.target.value })}
       />
-      <h2>Your first name is - {about.name}</h2>
-      <h2>Your last name is - {about.bio}</h2>
-      <h2>{JSON.stringify(about)}</h2>
+      <h3>Your name is - {about.name}</h3>
+      <h3>Your are working as - {about.bio}</h3>
+      <h3>{JSON.stringify(about)}</h3>
     </form>
   );
 }
