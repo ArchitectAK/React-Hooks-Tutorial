@@ -2,7 +2,7 @@ import "./App.css";
 // import ClassState from "./components/ClassState";
 import Hookstate from "./components/HookState";
 import HookStateObject from "./components/HookStateObject";
-import StateWithArray from "./components/HookStateArray";
+import HookStateArray from "./components/HookStateArray";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       {/* <ClassState /> */}
       <Hookstate />
       <HookStateObject />
-      <StateWithArray />
+      <HookStateArray />
     </div>
   );
 }
