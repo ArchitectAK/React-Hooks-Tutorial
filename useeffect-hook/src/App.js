@@ -1,12 +1,12 @@
 import "./App.css";
 import ClassUpdateTitle from "./componets/ClassUpdateTitle";
-import UseEffectTitle from "./componets/UseEffectTitle";
+import HookUpdateTile from "./componets/HookUpdateTitle";
 
 function App() {
   return (
     <div className="App">
       <ClassUpdateTitle />
-      <UseEffectTitle />
+      <HookUpdateTile />
     </div>
   );
 }
