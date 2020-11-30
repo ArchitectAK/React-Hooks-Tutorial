@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from "react";
-import axiso from "axios";
+import axios from "axios";
 
-function HookFetchSingleRepo() {
-  const [repo, setRepo] = useState([]);
-  const [name, setName] = useState([]);
+const FetchSingleRepo = () => {
+  const [name, setName] = useState("");
+  const [repo, setRepo] = useState({});
 
   useEffect(() => {
-    axiso
+    axios
       .get(`https://api.github.com/repos/AnkitDroidGit/${name}`)
       .then((response) => {
         console.log(response);
         setRepo(response.data);
       })
       .catch((error) => console.log(error));
-  }, [name]);
+  });
 
   return (
     <>
       <input
         type="text"
-        onChange={(e) => setName(e.target.value)}
         value={name}
-      />
-      <div>{repo.html_url}</div>
+        onChange={(e) => setName(e.target.value)}
+      ></input>
+      <div>HTML URL = {repo.html_url}</div>
     </>
   );
-}
+};
 
-export default HookFetchSingleRepo;
+export default FetchSingleRepo;
