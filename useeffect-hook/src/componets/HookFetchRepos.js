@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axiso from "axios";
+import axios from "axios";
 
 function HookFetch() {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    axiso
+    axios
       .get("https://api.github.com/users/AnkitDroidGit/repos")
       .then((response) => {
         console.log(response);
