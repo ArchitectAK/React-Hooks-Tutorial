@@ -1,12 +1,13 @@
 import "./App.css";
 // import ClassUpdateTitle from "./componets/ClassUpdateTitle";
 // import HookUpdateTile from "./componets/HookUpdateTitle";
-import HookFetch from "./componets/HookFetch";
+// import HookFetch from "./componets/HookFetchRepos";
+import HookFetchSingleRepo from "./componets/HookFetchSingleRepo";
 
 function App() {
   return (
     <div className="App">
-      <HookFetch />
+      <HookFetchSingleRepo />
     </div>
   );
 }
